@@ -61,5 +61,5 @@ Einfach erweiterbar bedeutet
 Hilfreiche Links:
 
 * https://www.baeldung.com/spring-dynamic-autowire
-* 
+
 * https://www.baeldung.com/spring-dynamic-autowire
