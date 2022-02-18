@@ -4,10 +4,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller
-@SpringBootApplication
-//@GetMapping("/api")
-public class unitConversionController {
+@RestController
+@RequestMapping("api")
+public class UnitConversionController {
 
     //@Getmapping("/convert")
     //public
