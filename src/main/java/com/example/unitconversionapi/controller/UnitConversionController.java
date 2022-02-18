@@ -11,4 +11,16 @@ public class UnitConversionController {
 
     //@Getmapping("/convert")
     //public
+
+    @PostMapping("/convert")
+    public double convertUnits(
+            @RequestParam(name = "from") String convertFrom,
+            @RequestParam(name = "to") String convertTo,
+            @RequestParam(name = "fromValue") double value
+    ) {
+        System.out.printf("Converting %f %s to %s", value, convertFrom, convertTo);
+        return 0;
+    }
+
+
 }
