@@ -1,26 +1,31 @@
 package com.example.unitconversionapi.controller;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.unitconversionapi.Service.BeanFactoryDynamicAutowireService;
+import org.springframework.beans.factory.NoSuchBeanDefinitionException;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api")
 public class UnitConversionController {
 
-    //@Getmapping("/convert")
-    //public
+    private final BeanFactoryDynamicAutowireService beanFactoryDynamicAutowireService;
+
+    public UnitConversionController(BeanFactoryDynamicAutowireService beanFactoryDynamicAutowireService) {
+        this.beanFactoryDynamicAutowireService = beanFactoryDynamicAutowireService;
+    }
+
 
     @PostMapping("/convert")
     public double convertUnits(
-            @RequestParam(name = "from") String convertFrom,
-            @RequestParam(name = "to") String convertTo,
-            @RequestParam(name = "fromValue") double value
+            @RequestParam(name = "conversionUnits") String conversionUnits,
+            @RequestParam(name = "value") double value
     ) {
-        System.out.printf("Converting %f %s to %s", value, convertFrom, convertTo);
-        return 0;
+        return beanFactoryDynamicAutowireService.convert(conversionUnits, value);
     }
+
+//    @ExceptionHandler(NoSuchBeanDefinitionException.class)
+//    public void customNoSuchBeanDefinitionException() {
+//    }
 
 
 }
