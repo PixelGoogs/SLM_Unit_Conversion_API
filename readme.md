@@ -2,6 +2,25 @@
 
 [![Java CI with Maven](https://github.com/PixelGoogs/SLM_Unit_Conversion_API/actions/workflows/maven.yml/badge.svg)](https://github.com/PixelGoogs/SLM_Unit_Conversion_API/actions/workflows/maven.yml)
 
+## How To Run
+
+- Download `Package.zip` from the [latest passing build](https://github.com/PixelGoogs/SLM_Unit_Conversion_API/actions).
+- Unzip Package
+- Run JAR file using `java -jar UnitConversionAPI-0.0.1-SNAPSHOT.jar`
+- This will start a server on `localhost:8080`
+
+### Example GET Request
+
+`localhost:8080/api/convert?conversionUnits=gToKg&value=10`
+
+This will give the converted response value as a float.
+
+Currently possible values for the `conversionUnits` request parameter are:
+- Gram to kilogram: `gToKg`
+- Kilogram to gram: `KgToG`
+- Celsius to Fahrenheit: `cToF`
+- Fahrenheit to Celsius: `fToC`
+
 ## Unit Conversion API
 
 Wir sind ein kleines Labor in Wien. Um unseren Forschungsprozess zu verbessern, wollen wir eine digitale Schnittstelle beauftragen, die Maßeinheiten umrechnet. Um die Funktionen zu testen, soll ein Prototyp entwickelt werden, der
