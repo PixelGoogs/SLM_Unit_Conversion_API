@@ -1,7 +1,6 @@
 package com.example.unitconversionapi.controller;
 
 import com.example.unitconversionapi.Service.BeanFactoryDynamicAutowireService;
-import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -14,7 +13,6 @@ public class UnitConversionController {
         this.beanFactoryDynamicAutowireService = beanFactoryDynamicAutowireService;
     }
 
-
     @PostMapping("/convert")
     public double convertUnits(
             @RequestParam(name = "conversionUnits") String conversionUnits,
@@ -22,10 +20,4 @@ public class UnitConversionController {
     ) {
         return beanFactoryDynamicAutowireService.convert(conversionUnits, value);
     }
-
-//    @ExceptionHandler(NoSuchBeanDefinitionException.class)
-//    public void customNoSuchBeanDefinitionException() {
-//    }
-
-
 }

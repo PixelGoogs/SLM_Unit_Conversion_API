@@ -6,6 +6,7 @@ public interface ConversionStrategy {
     boolean isConversionValid();
 
     String getFromType();
+
     String getToType();
 
 }
