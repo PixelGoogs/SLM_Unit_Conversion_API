@@ -10,10 +10,10 @@ public class KgToGStrategy implements ConversionStrategy {
 
     @Override
     public double convert(String fromType, String toType, double fromValue) {
-        try {
+        if (fromValue < 0) {
+            throw new ArithmeticException("Input value must be a positive number!");
+        } else {
             return fromValue * 1000;
-        } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("input value must be a positive number");
         }
     }
 
