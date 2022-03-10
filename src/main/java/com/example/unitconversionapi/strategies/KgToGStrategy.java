@@ -10,7 +10,11 @@ public class KgToGStrategy implements ConversionStrategy {
 
     @Override
     public double convert(String fromType, String toType, double fromValue) {
-        return fromValue * 1000;
+        try {
+            return fromValue * 1000;
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("input value must be a positive number");
+        }
     }
 
     @Override
