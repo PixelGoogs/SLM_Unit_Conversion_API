@@ -1,10 +1,6 @@
 # Welcome to the SLM_Unit_Conversion_API!
 
-https://cis.technikum-wien.at/cis/index.html
-
-https://moodle.technikum-wien.at/my/
-
-https://moodle.technikum-wien.at/course/view.php?id=16820
+[![Java CI with Maven](https://github.com/PixelGoogs/SLM_Unit_Conversion_API/actions/workflows/maven.yml/badge.svg)](https://github.com/PixelGoogs/SLM_Unit_Conversion_API/actions/workflows/maven.yml)
 
 ## Unit Conversion API
 
