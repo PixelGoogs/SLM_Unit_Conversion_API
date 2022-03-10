@@ -7,7 +7,6 @@ public class KgToGStrategy implements ConversionStrategy {
     public String fromType = "kg";
     public String toType = "g";
 
-
     @Override
     public double convert(String fromType, String toType, double fromValue) {
         if (fromValue < 0) {

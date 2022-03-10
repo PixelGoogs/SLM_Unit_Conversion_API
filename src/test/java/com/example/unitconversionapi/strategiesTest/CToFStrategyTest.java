@@ -2,6 +2,7 @@ package com.example.unitconversionapi.strategiesTest;
 
 import com.example.unitconversionapi.strategies.CToFStrategy;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CToFStrategyTest {
