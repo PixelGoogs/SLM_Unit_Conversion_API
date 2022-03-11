@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Response {
-    private double fromValue;
+    private double inputValue;
     private String conversionUnits;
     private double result;
 
