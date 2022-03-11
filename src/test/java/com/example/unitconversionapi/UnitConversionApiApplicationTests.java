@@ -6,6 +6,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -32,6 +33,16 @@ class UnitConversionApiApplicationTests {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\"conversionUnits\": \"kgToG\", \"inputValue\": 10}"))
                 .andExpect(status().isOk());
+    }
+
+    @Test
+    public void sendPostRequest_expectCorrectOutputValue() throws Exception {
+        this.mockMvc.perform(post("/api/convert")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"conversionUnits\": \"kgToG\", \"inputValue\": 10}"))
+                .andExpect(status().isOk())
+                .andExpect(MockMvcResultMatchers.content()
+                        .json("{\"inputValue\": 10.0, \"conversionUnits\": \"kgToG\", \"result\": 10000.0}"));
     }
 
 }
