@@ -1,10 +1,25 @@
 # Welcome to the SLM_Unit_Conversion_API!
 
-https://cis.technikum-wien.at/cis/index.html
+[![Java CI with Maven](https://github.com/PixelGoogs/SLM_Unit_Conversion_API/actions/workflows/maven.yml/badge.svg)](https://github.com/PixelGoogs/SLM_Unit_Conversion_API/actions/workflows/maven.yml)
 
-https://moodle.technikum-wien.at/my/
+## How To Run
 
-https://moodle.technikum-wien.at/course/view.php?id=16820
+- Download `Package.zip` from the [latest passing build](https://github.com/PixelGoogs/SLM_Unit_Conversion_API/actions).
+- Unzip Package
+- Run JAR file using `java -jar UnitConversionAPI-0.0.1-SNAPSHOT.jar`
+- This will start a server on `localhost:8080`
+
+### Example GET Request
+
+`localhost:8080/api/convert?conversionUnits=gToKg&value=10`
+
+This will give the converted response value as a float.
+
+Currently possible values for the `conversionUnits` request parameter are:
+- Gram to kilogram: `gToKg`
+- Kilogram to gram: `KgToG`
+- Celsius to Fahrenheit: `cToF`
+- Fahrenheit to Celsius: `fToC`
 
 ## Unit Conversion API
 
