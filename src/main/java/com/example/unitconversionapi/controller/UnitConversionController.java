@@ -7,6 +7,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * This is the main Controller of the API
+ */
 @RestController
 @RequestMapping("api")
 public class UnitConversionController {
@@ -16,7 +19,10 @@ public class UnitConversionController {
     public UnitConversionController(BeanFactoryDynamicAutowireService beanFactoryDynamicAutowireService) {
         this.beanFactoryDynamicAutowireService = beanFactoryDynamicAutowireService;
     }
-
+    /**
+     * "/convert" ist our converter Route which automatically chooses the necessary strategy based on RequestBody
+     * If request fails send Bad_request (example: non existing strategy)
+     */
     @PostMapping("/convert")
     public ResponseEntity<Response> convertUnits(@RequestBody Request request) {
         double result = beanFactoryDynamicAutowireService.convert(request.getConversionUnits(), request.getInputValue());
