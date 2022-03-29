@@ -3,6 +3,7 @@ package com.example.unitconversionapi;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
 /**
  * A Conversion-Unit-API in Java.
  * This is a Java-Doc commentary.
@@ -13,10 +14,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * This is the main SpringBootApplication needed to run the application.
  */
-
 @SpringBootApplication
 public class UnitConversionApiApplication {
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         SpringApplication.run(UnitConversionApiApplication.class, args);
     }

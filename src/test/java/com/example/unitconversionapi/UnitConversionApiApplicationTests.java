@@ -11,6 +11,9 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+/**
+ * The type Unit conversion api application tests.
+ */
 @SpringBootTest
 @AutoConfigureMockMvc
 class UnitConversionApiApplicationTests {
@@ -18,15 +21,28 @@ class UnitConversionApiApplicationTests {
     @Autowired
     private MockMvc mockMvc;
 
+    /**
+     * Context loads.
+     */
     @Test
     void contextLoads() {
     }
 
+    /**
+     * No body should return bad request.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void noBodyShouldReturnBadRequest() throws Exception {
         this.mockMvc.perform(post("/api/convert")).andExpect(status().isBadRequest());
     }
 
+    /**
+     * Send post request with body expect 200.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void sendPostRequestWithBody_expect200() throws Exception {
         this.mockMvc.perform(post("/api/convert")
@@ -35,6 +51,11 @@ class UnitConversionApiApplicationTests {
                 .andExpect(status().isOk());
     }
 
+    /**
+     * Send post request expect correct output value.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void sendPostRequest_expectCorrectOutputValue() throws Exception {
         this.mockMvc.perform(post("/api/convert")
