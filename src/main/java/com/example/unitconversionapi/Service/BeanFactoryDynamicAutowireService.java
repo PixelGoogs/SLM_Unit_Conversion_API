@@ -40,6 +40,10 @@ public class BeanFactoryDynamicAutowireService {
 
     }
 
+    /**
+     * @param conversionUnits the conversion units
+     * @return the conversion strategy bean name which is used to get the correct conversion strategy
+     */
     private String getConversionStrategyBeanName(String conversionUnits) {
         return conversionUnits + SERVICE_NAME_SUFFIX;
     }
