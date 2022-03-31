@@ -2,6 +2,10 @@ package com.example.unitconversionapi.strategies;
 
 import org.springframework.stereotype.Service;
 
+/**
+ * implements ConversionStrategy Interface.
+ * Gets automatically chosen based on BeanFactory
+ */
 @Service("kgToGConversionStrategy")
 public class KgToGStrategy implements ConversionStrategy {
     public String fromType = "kg";

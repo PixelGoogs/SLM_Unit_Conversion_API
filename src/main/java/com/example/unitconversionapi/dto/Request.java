@@ -5,6 +5,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Requested DTO per API
+ */
+
 @Getter
 @Setter
 @NoArgsConstructor
